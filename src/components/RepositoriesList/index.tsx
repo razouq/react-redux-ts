@@ -10,7 +10,6 @@ const RepositoriesList: React.FC = () => {
     state => state.repositories,
   );
 
-  const repositories = useTypedSelector(state => state.repositories.data);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTerm(e.target.value);
   };
@@ -21,7 +20,7 @@ const RepositoriesList: React.FC = () => {
   };
 
   const renderRepositories = () => {
-    return repositories.map(repository => (
+    return data.map(repository => (
       <li key={repository}>{repository}</li>
     ));
   };
