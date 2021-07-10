@@ -7,8 +7,10 @@ import { store } from './state';
 function App() {
   return (
     <Provider store={store}>
-      <h1>Search for a Package</h1>
-      <RepositoriesList />
+      <div className='container my-5'>
+        <h1>Search for a Package</h1>
+        <RepositoriesList />
+      </div>
     </Provider>
   );
 }
